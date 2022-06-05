@@ -14,6 +14,7 @@ namespace btl {
         using type = std::tuple<>;
     };
 
+    // Now receive the tuple, and 'prune' off the front/head each time
     template<typename T, typename ...Ts>
     struct tuple_reverse<std::tuple<T, Ts...>> {
         using head = std::tuple<T>;
